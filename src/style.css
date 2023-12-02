@@ -28,7 +28,7 @@ header {
 }
 
 input::placeholder {
-  color: #475053;
+  color: #2e94b9;
   font-weight: 700;
 }
 
@@ -103,4 +103,34 @@ h5 {
   text-align: right;
   padding: 5px;
   margin: 5px;
+}
+
+.forecast-section {
+  background-color: #f0fbff;
+}
+
+.following-days {
+  text-align: center;
+}
+
+.following-icons {
+  text-align: center;
+  font-size: 28px;
+  color: #acdcee;
+  padding: 2px;
+}
+
+.following-temperatures {
+  text-align: center;
+  font-size: 12px;
+  padding: 2px;
+}
+
+hr {
+  border-top: 4px solid #acdcee;
+}
+
+footer {
+  margin: 20px;
+  font-size: 10px;
 }
