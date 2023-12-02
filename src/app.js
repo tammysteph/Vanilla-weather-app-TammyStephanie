@@ -107,6 +107,9 @@ function getTemperature(response) {
   let showCity = document.querySelector("#current-city");
   let currentCity = response.data.city;
   showCity.innerHTML = currentCity;
+  let mainWeatherIcon = document.querySelector("#main-icon");
+  let currentWeatherIcon = response.data.condition.icon_url;
+  mainWeatherIcon.innerHTML = `<img src="${currentWeatherIcon}" width="70px" />`;
 }
 
 let apiKey = "40650d4bb3o2af2ba3e724cb1t7e50cb";
