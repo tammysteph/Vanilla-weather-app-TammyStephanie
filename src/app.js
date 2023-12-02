@@ -1,51 +1,4 @@
-function formatDate() {
-  let now = new Date();
-
-  let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
-  let day = days[now.getDay()];
-
-  let months = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
-  ];
-  let month = months[now.getMonth()];
-
-  let minutes = now.getMinutes();
-  let hours = now.getHours();
-
-  if (minutes < 10) {
-    minutes = `0${minutes}`;
-  }
-
-  if (hours < 10) {
-    hours = `0${hours}`;
-  }
-
-  let formattedDate = `${day} ${hours}:${minutes}, ${month} ${now.getDate()}, ${now.getFullYear()}`;
-
-  let currentDay = document.querySelector("#current-day");
-  currentDay.innerHTML = formattedDate;
-}
-
-formatDate();
+////
 
 function forecastDays() {
   let now = new Date();
@@ -110,6 +63,51 @@ function getTemperature(response) {
   let mainWeatherIcon = document.querySelector("#main-icon");
   let currentWeatherIcon = response.data.condition.icon_url;
   mainWeatherIcon.innerHTML = `<img src="${currentWeatherIcon}" width="80px" />`;
+  let dateElement = document.querySelector("#current-day");
+  let localDate = new Date(response.data.time * 1000);
+  dateElement.innerHTML = formatDate(localDate);
+}
+
+function formatDate(date) {
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[date.getDay()];
+
+  let months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  let month = months[date.getMonth()];
+
+  let minutes = date.getMinutes();
+  let hours = date.getHours();
+
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+
+  return `${day} ${hours}:${minutes}, ${month} ${date.getDate()}, ${date.getFullYear()}`;
 }
 
 function executeTemp(city) {
