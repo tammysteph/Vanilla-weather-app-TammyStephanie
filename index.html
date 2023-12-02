@@ -40,7 +40,7 @@
       </header>
 
       <main>
-        <div class="row">
+        <div class="row align-items-center">
           <div class="col-6">
             <div class="row">
               <h1 class="current-city" id="current-city">Placeholder city</h1>
@@ -50,7 +50,9 @@
                 <span id="current-temperature">23</span
                 ><span class="tempUnit">°C</span>
               </div>
-              <div class="col-6 weatherIcon">Icon</div>
+              <div class="col-6 weatherIcon">
+                <i class="fa-solid fa-sun"></i>
+              </div>
             </div>
             <div class="row">
               <h3 class="current-weather" id="current-weather">Rainy</h3>
@@ -68,14 +70,14 @@
                 <i class="fa-solid fa-droplet"></i>
               </div>
               <div class="col-6"><h5>Humidity:</h5></div>
-              <div class="col-5">
-                <p class="precipitation-percentage" id="humidity">100%</p>
+              <div class="col-5 align-self-center">
+                <p class="humidity-percentage" id="humidity">100%</p>
               </div>
             </div>
             <div class="row border-bottom align-items-center">
               <div class="col-1"><i class="fa-solid fa-wind"></i></div>
               <div class="col-6"><h5>Wind:</h5></div>
-              <div class="col-5">
+              <div class="col-5 align-self-center">
                 <p class="wind-speed" id="wind-speed">21 km/h</p>
               </div>
             </div>
