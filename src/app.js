@@ -112,14 +112,20 @@ function getTemperature(response) {
   mainWeatherIcon.innerHTML = `<img src="${currentWeatherIcon}" width="80px" />`;
 }
 
-let apiKey = "40650d4bb3o2af2ba3e724cb1t7e50cb";
-let cityInput = document.querySelector("#city-input");
-
-function executeTemp(event) {
-  event.preventDefault();
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${cityInput.value}&key=${apiKey}&units=metric`;
+function executeTemp(city) {
+  let apiKey = "40650d4bb3o2af2ba3e724cb1t7e50cb";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
   axios.get(apiUrl).then(getTemperature);
 }
 
+function handleSearchInput(event) {
+  event.preventDefault();
+  let cityInput = document.querySelector("#city-input");
+
+  executeTemp(cityInput.value);
+}
+
 let cityForm = document.querySelector("#city-form");
-cityForm.addEventListener("submit", executeTemp);
+cityForm.addEventListener("submit", handleSearchInput);
+
+executeTemp("Rome");
