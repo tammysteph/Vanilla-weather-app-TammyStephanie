@@ -9,6 +9,7 @@ body {
   border-color: #2e94b9;
   box-shadow: 5px 5px 25px rgba(172, 220, 238, 0.4);
   max-width: 800px;
+  font-family: "Roboto Mono", monospace;
 }
 
 header {
