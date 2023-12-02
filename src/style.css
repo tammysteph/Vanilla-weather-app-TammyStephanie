@@ -58,7 +58,7 @@ main {
 }
 
 .main-temperature {
-  text-align: center;
+  text-align: right;
   font-size: 44px;
   font-weight: 600;
   margin: 0;
