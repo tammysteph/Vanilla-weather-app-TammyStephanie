@@ -100,16 +100,16 @@ function getTemperature(response) {
   currentWeather.innerHTML = `Weather: ${searchedWeather}`;
   let humidity = document.querySelector("#humidity");
   let currentHumidity = response.data.temperature.humidity;
-  humidity.innerHTML = currentHumidity;
+  humidity.innerHTML = `${currentHumidity}%`;
   let windSpeed = document.querySelector("#wind-speed");
   let currentWind = response.data.wind.speed;
-  windSpeed.innerHTML = currentWind;
+  windSpeed.innerHTML = `${currentWind} km/h`;
   let showCity = document.querySelector("#current-city");
   let currentCity = response.data.city;
   showCity.innerHTML = currentCity;
   let mainWeatherIcon = document.querySelector("#main-icon");
   let currentWeatherIcon = response.data.condition.icon_url;
-  mainWeatherIcon.innerHTML = `<img src="${currentWeatherIcon}" width="70px" />`;
+  mainWeatherIcon.innerHTML = `<img src="${currentWeatherIcon}" width="80px" />`;
 }
 
 let apiKey = "40650d4bb3o2af2ba3e724cb1t7e50cb";
