@@ -88,3 +88,35 @@ function forecastDays() {
 }
 
 forecastDays();
+
+/////
+
+function getTemperature(response) {
+  let currentTemperature = document.querySelector("#current-temperature");
+  let temperature = Math.round(response.data.temperature.current);
+  currentTemperature.innerHTML = `${temperature}`;
+  let currentWeather = document.querySelector("#current-weather");
+  let searchedWeather = response.data.condition.description;
+  currentWeather.innerHTML = `Weather: ${searchedWeather}`;
+  let humidity = document.querySelector("#humidity");
+  let currentHumidity = response.data.temperature.humidity;
+  humidity.innerHTML = currentHumidity;
+  let windSpeed = document.querySelector("#wind-speed");
+  let currentWind = response.data.wind.speed;
+  windSpeed.innerHTML = currentWind;
+  let showCity = document.querySelector("#current-city");
+  let currentCity = response.data.city;
+  showCity.innerHTML = currentCity;
+}
+
+let apiKey = "40650d4bb3o2af2ba3e724cb1t7e50cb";
+let cityInput = document.querySelector("#city-input");
+
+function executeTemp(event) {
+  event.preventDefault();
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${cityInput.value}&key=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(getTemperature);
+}
+
+let cityForm = document.querySelector("#city-form");
+cityForm.addEventListener("submit", executeTemp);
