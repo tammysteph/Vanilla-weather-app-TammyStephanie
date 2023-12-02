@@ -39,77 +39,81 @@
         </form>
       </header>
 
-      <div class="row">
-        <div class="col-6">
-          <div class="row">
-            <h1 class="current-city" id="current-city">Placeholder city</h1>
-          </div>
-          <div class="row">
-            <div class="col-6 main-temperature">
-              <span id="current-temperature">23</span
-              ><span class="tempUnit">°C</span>
+      <main>
+        <div class="row">
+          <div class="col-6">
+            <div class="row">
+              <h1 class="current-city" id="current-city">Placeholder city</h1>
             </div>
-            <div class="col-6 weatherIcon">Icon</div>
+            <div class="row">
+              <div class="col-6 main-temperature">
+                <span id="current-temperature">23</span
+                ><span class="tempUnit">°C</span>
+              </div>
+              <div class="col-6 weatherIcon">Icon</div>
+            </div>
+            <div class="row">
+              <h3 class="current-weather" id="current-weather">Rainy</h3>
+            </div>
           </div>
-          <div class="row">
-            <h3 class="current-weather" id="current-weather">Rainy</h3>
+          <div class="col-6">
+            <div class="row border-bottom align-items-center">
+              <h4 class="current-day" id="current-day">
+                current day placeholder
+              </h4>
+            </div>
+
+            <div class="row border-bottom align-items-center">
+              <div class="col-1">
+                <i class="fa-solid fa-droplet"></i>
+              </div>
+              <div class="col-6"><h5>Humidity:</h5></div>
+              <div class="col-5">
+                <p class="precipitation-percentage" id="humidity">100%</p>
+              </div>
+            </div>
+            <div class="row border-bottom align-items-center">
+              <div class="col-1"><i class="fa-solid fa-wind"></i></div>
+              <div class="col-6"><h5>Wind:</h5></div>
+              <div class="col-5">
+                <p class="wind-speed" id="wind-speed">21 km/h</p>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="col-6">
-          <div class="row border-bottom align-items-center">
-            <h4 class="current-day" id="current-day">
-              current day placeholder
-            </h4>
-          </div>
+      </main>
 
-          <div class="row border-bottom align-items-center">
-            <div class="col-1">
-              <i class="fa-solid fa-droplet"></i>
-            </div>
-            <div class="col-6"><h5>Humidity:</h5></div>
-            <div class="col-5">
-              <p class="precipitation-percentage" id="humidity">100%</p>
-            </div>
-          </div>
-          <div class="row border-bottom align-items-center">
-            <div class="col-1"><i class="fa-solid fa-wind"></i></div>
-            <div class="col-6"><h5>Wind:</h5></div>
-            <div class="col-5">
-              <p class="wind-speed" id="wind-speed">21 km/h</p>
-            </div>
-          </div>
+      <section>
+        <hr />
+        <div class="row following-days">
+          <div class="col-2">Day+1</div>
+          <div class="col-2">Day+2</div>
+          <div class="col-2">Day+3</div>
+          <div class="col-2">Day+4</div>
+          <div class="col-2">Day+5</div>
+          <div class="col-2">Day+6</div>
         </div>
-      </div>
 
-      <hr />
-      <div class="row following-days">
-        <div class="col-2">Day+1</div>
-        <div class="col-2">Day+2</div>
-        <div class="col-2">Day+3</div>
-        <div class="col-2">Day+4</div>
-        <div class="col-2">Day+5</div>
-        <div class="col-2">Day+6</div>
-      </div>
+        <div class="row following-icons">
+          <div class="col-2"><i class="fa-solid fa-cloud-sun"></i></div>
+          <div class="col-2"><i class="fa-solid fa-cloud-rain"></i></div>
+          <div class="col-2"><i class="fa-solid fa-cloud-rain"></i></div>
+          <div class="col-2"><i class="fa-solid fa-cloud"></i></div>
+          <div class="col-2"><i class="fa-solid fa-cloud-sun-rain"></i></div>
+          <div class="col-2"><i class="fa-solid fa-sun"></i></div>
+        </div>
 
-      <div class="row following-icons">
-        <div class="col-2"><i class="fa-solid fa-cloud-sun"></i></div>
-        <div class="col-2"><i class="fa-solid fa-cloud-rain"></i></div>
-        <div class="col-2"><i class="fa-solid fa-cloud-rain"></i></div>
-        <div class="col-2"><i class="fa-solid fa-cloud"></i></div>
-        <div class="col-2"><i class="fa-solid fa-cloud-sun-rain"></i></div>
-        <div class="col-2"><i class="fa-solid fa-sun"></i></div>
-      </div>
+        <div class="row following-temperatures">
+          <div class="col-2">23°C-19°C</div>
+          <div class="col-2">23°C-17°C</div>
+          <div class="col-2">26°C-18°C</div>
+          <div class="col-2">27°C-21°C</div>
+          <div class="col-2">23°C-18°C</div>
+          <div class="col-2">23°C-19°C</div>
+        </div>
 
-      <div class="row following-temperatures">
-        <div class="col-2">23°C-19°C</div>
-        <div class="col-2">23°C-17°C</div>
-        <div class="col-2">26°C-18°C</div>
-        <div class="col-2">27°C-21°C</div>
-        <div class="col-2">23°C-18°C</div>
-        <div class="col-2">23°C-19°C</div>
-      </div>
-
-      <hr />
+        <hr />
+      </section>
 
       <footer>
         Coded By
