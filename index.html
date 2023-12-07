@@ -92,57 +92,20 @@
 
       <section class="forecast-section">
         <hr />
-        <div class="row following-days">
-          <div class="col-2" id="dayPlusOne">Day+1</div>
-          <div class="col-2" id="dayPlusTwo">Day+2</div>
-          <div class="col-2" id="dayPlusThree">Day+3</div>
-          <div class="col-2" id="dayPlusFour">Day+4</div>
-          <div class="col-2" id="dayPlusFive">Day+5</div>
-          <div class="col-2" id="dayPlusSix">Day+6</div>
-        </div>
-
-        <div class="row following-icons">
-          <div class="col-2"><i class="fa-solid fa-cloud-sun"></i></div>
-          <div class="col-2"><i class="fa-solid fa-cloud-rain"></i></div>
-          <div class="col-2"><i class="fa-solid fa-cloud-rain"></i></div>
-          <div class="col-2"><i class="fa-solid fa-cloud"></i></div>
-          <div class="col-2"><i class="fa-solid fa-cloud-sun-rain"></i></div>
-          <div class="col-2"><i class="fa-solid fa-sun"></i></div>
-        </div>
-
-        <div class="row following-temperatures">
-          <div class="col-2">
-            <span id="temp-max-day1">23</span>°C-<span id="temp-min-day1"
-              >19</span
-            >°C
-          </div>
-          <div class="col-2">
-            <span id="temp-max-day2">23</span>°C-<span id="temp-min-day2"
-              >19</span
-            >°C
-          </div>
-          <div class="col-2">
-            <span id="temp-max-day3">23</span>°C-<span id="temp-min-day3"
-              >19</span
-            >°C
-          </div>
-          <div class="col-2">
-            <span id="temp-max-day4">23</span>°C-<span id="temp-min-day4"
-              >19</span
-            >°C
-          </div>
-          <div class="col-2">
-            <span id="temp-max-day5">23</span>°C-<span id="temp-min-day5"
-              >19</span
-            >°C
-          </div>
-          <div class="col-2">
-            <span id="temp-max-day6">23</span>°C-<span id="temp-min-day6"
-              >19</span
-            >°C
+        <div id="forecast-section">
+          <div class="weather-forecast-day">
+            <div class="weather-forecast-date">${day}</div>
+            <div class="weather-forecast-icon">
+              <i class="fa-solid fa-cloud-sun"></i>
+            </div>
+            <div class="weather-forecast-temperatures">
+              <div class="weather-forecast-temperature-max">
+                <strong>15º</strong>
+              </div>
+              <div class="weather-forecast-temperature-min">9º</div>
+            </div>
           </div>
         </div>
-
         <hr />
       </section>
 

@@ -111,21 +111,23 @@ h5 {
   background-color: #f0fbff;
 }
 
-.following-days {
+.weather-forecast-date {
   text-align: center;
 }
 
-.following-icons {
+.weather-forecast-icon {
   text-align: center;
   font-size: 28px;
   color: #acdcee;
   padding: 2px;
 }
 
-.following-temperatures {
+.weather-forecast-temperatures {
   text-align: center;
   font-size: 12px;
   padding: 2px;
+  display: flex;
+  justify-content: space-around;
 }
 
 hr {
