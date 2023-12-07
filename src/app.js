@@ -20,6 +20,8 @@ function getTemperature(response) {
   let dateElement = document.querySelector("#current-day");
   let localDate = new Date(response.data.time * 1000);
   dateElement.innerHTML = formatDate(localDate);
+
+  getForecast(response.data.city);
 }
 
 function formatDate(date) {
@@ -83,7 +85,15 @@ cityForm.addEventListener("submit", handleSearchInput);
 executeTemp("Rome");
 
 ////
-function diplayForecast() {
+function getForecast(city) {
+  let apiKey = "40650d4bb3o2af2ba3e724cb1t7e50cb";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  axios(apiUrl).then(displayForecast);
+}
+
+function displayForecast(response) {
+  console.log(response.data);
+
   let forecast = document.querySelector("#forecast-section");
   let days = ["Day+1", "Day+2", "Day+3", "Day+4", "Day+5", "Day+6"];
   let forecastHtml = "";
@@ -109,5 +119,3 @@ function diplayForecast() {
 
   forecast.innerHTML = forecastHtml;
 }
-
-diplayForecast();
