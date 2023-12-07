@@ -111,6 +111,11 @@ h5 {
   background-color: #f0fbff;
 }
 
+#forecast-section {
+  display: flex;
+  justify-content: space-around;
+}
+
 .weather-forecast-date {
   text-align: center;
 }

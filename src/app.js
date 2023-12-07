@@ -85,4 +85,29 @@ executeTemp("Rome");
 ////
 function diplayForecast() {
   let forecast = document.querySelector("#forecast-section");
+  let days = ["Day+1", "Day+2", "Day+3", "Day+4", "Day+5", "Day+6"];
+  let forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `
+  <div class="weather-forecast-day">
+            <div class="weather-forecast-date">${day}</div>
+            <div class="weather-forecast-icon">
+              <i class="fa-solid fa-cloud-sun"></i>
+            </div>
+            <div class="weather-forecast-temperatures">
+              <div class="weather-forecast-temperature-max">
+                <strong>15º</strong>
+              </div>
+              <div class="weather-forecast-temperature-min">9º</div>
+            </div>
+          </div>
+          `;
+  });
+
+  forecast.innerHTML = forecastHtml;
 }
+
+diplayForecast();
